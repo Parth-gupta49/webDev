@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice-stuff</title>
+<style>
+    .container{
+        background-color: beige;
+        height: 800px;
+        border: 2px solid black;
+        display: flex;
+    }
+    .box{
+        border: 2px solid black;
+        height: 150px;
+        width: 200px;
+        margin: 4px;
+    }
+    #box1{background-color: aquamarine;}
+    #box2{background-color: peru;}
+    #box3{background-color: purple;}
+    #box4{background-color: brown;}
+
+    @media (min-width:600px){
+        .container{
+            flex-direction: row;
+        }
+    }
+
+    @media (max-width:600px){
+        .container{
+            flex-direction: column;
+        }
+    }
+</style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box" id="box1">A</div>
+        <div class="box" id="box2">B</div>
+        <div class="box" id="box3">C</div>
+        <div class="box" id="box4">D</div>
+    </div>
+</body>
+</html>

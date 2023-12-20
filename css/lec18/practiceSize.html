@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Size&UnitsInCSS</title>
+    <style>
+        :root
+        {
+            --keyColor:rgba(111, 141, 157, 0.375);
+        }
+
+        * {
+            margin: 2px;
+            padding: 0px;
+        }
+
+        .container {
+            --primaryColos:brown;
+            background-color: var(--keyColor);
+            width: 75%;
+            height: 100vh;
+            color: var(--primaryColos);
+        }
+
+        .box1 {
+            background-color: rgb(3, 5, 6 / 0.6);
+            width: 50%;
+            height: 200px;
+            
+            border: 2px solid black;
+            font-size: 1rem;
+        }
+
+        .box2 {
+            background-color: green;
+            width: 200px;
+            height: 200px;
+            margin: 10px;
+            border: 2px solid black;
+        }
+
+        .box3 {
+            background-color: yellow;
+            width: 200px;
+            height: 200px;
+            margin: 10px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis dolore voluptas odio magnam soluta nihil aspernatur quo assumenda perspiciatis, fugiat autem doloribus sapiente, dolores in.</div>
+        <div class="box2">B</div>
+        <div class="box3">C</div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            --primaryColor : rgba(23, 184, 23, 0.681);
+        }
+        .container{
+            background-color: beige;
+            height: 1000px;
+            border: 2px solid black;
+            /*overflow: auto;*/
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box{
+            /*if i create the custom variable inside the braces its only applicable within this curly braces only
+            To have it for the whole css, gotta write :root as it is written above to be applicable for the whole css
+            */
+            background-color: var(--primaryColor);
+            width: 500px;
+            height: 500px;
+            border: 3px solid black;
+            border-radius: 5px;
+            margin: 5px;
+            padding: 3px;
+            text-align: center;
+            /*box-shadow: -10px 15px brown;*/
+            /*To provide .. blur-radius*/
+            /*box-shadow: 10px 15px 10px brown ;*/ /*look carefully at the blur-radius value (it should always be positive )the more it is the more blur it gets and its size increases as well as the value gets increases*/
+            /*box-shadow: 10px 15px 5px 40px brown;*/
+
+
+            /*to put the shadow inside the box we'll do this stuff*/
+            /*box-shadow:inset 10px 15px 5px brown;*/
+
+            /*to give multiple shadows*/
+            /*box-shadow: 10px 15px red,15px 8px green;*/
+            
+            
+            
+            
+        }
+        #head1{ 
+            /*text-shadow: 12px 13px 1px white;*/
+            /*another syntax to do the similar stuff*/
+            /*text-shadow: rgba(255, 255, 255, 0.603) 10px 13px 5px;*/
+
+            /*text-shadow: 10px 10px white;*/
+            /*text-shadow: 10px 4px ;*/
+            text-shadow: 10px 12px rgb(160, 71, 71),2px 5px yellow,2px 8px silver;
+}
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <img src="../media/logo.png" alt="myImage" height="100px" width="100px"/>
+            <h1 id="head1">Welcome to CodeHelp</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo minima ducimus assumenda aliquid
+                molestiae earum? Delectus commodi quos repellendus vitae corrupti suscipit?</p>
+        </div>
+    </div>
+</body>
+
+</html>

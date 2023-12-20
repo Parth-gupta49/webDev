@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Working with media Media-Query & Flex-Box</title>
+    <style>
+        .container{
+
+            border: 2px solid black;
+            background-color: rgba(206, 206, 140, 0.699);
+            display: flex;
+
+        }
+        .box{
+            border: 2px solid black;
+            background-color: rgb(112, 186, 218);
+            height: 200px;
+            width: 200px;
+            margin: 5px;
+        }
+        #box1{background-color: tomato;}
+        #box2{background-color: goldenrod;}
+        #box3{background-color: grey;}
+        #box4{background-color: purple;}
+
+        @media (min-width:640px){
+            .container{
+                flex-direction: row;
+            }
+        }
+
+        @media (max-width:640px){
+            .container{
+                flex-direction: column ;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="box1">A</div>
+        <div class="box" id="box2">B</div>
+        <div class="box" id="box3">C</div>
+        <div class="box" id="box4">D</div>
+    </div>
+</body>
+</html>
