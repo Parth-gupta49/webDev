@@ -25,7 +25,7 @@
             height: 80px;
             border-radius: 5px;
             background-color: yellow;
-            margin: 10px;
+            margin: 50px;
             border: 2px solid black;
             position: relative;
             /*
@@ -48,7 +48,7 @@
             /* 
             @keyframes duration | easing-function | delay | iteration-count | direction | fill-mode |play-state | name 
             */
-            animation: 5s linear 1s infinite alternate none running leftMovement;
+            animation: 5s linear 1s infinite alternate none PAUSED  leftMovement;
 
         }
         .box2{
@@ -59,7 +59,7 @@
             /*margin: 10px;*/
             border: 2px solid black;
             position: relative;
-            animation: 5s linear 1s infinite alternate none running rightMovement;
+            animation: 5s linear 1s infinite alternate none PAUSED  rightMovement;
             
         }
         .circle{
@@ -71,6 +71,7 @@
             border-radius: 150px;
             top: 15%;
             left: 47%;
+            animation: 5s linear 0s infinite alternate-reverse none RUNNING circleMovement;
         }
         @keyframes rightMovement {
             from {
@@ -93,6 +94,15 @@
                 top: 570px;
                 left: 0px;
             }
+        }
+
+        @keyframes circleMovement {
+            0%{top: 30%;right: 30%;}
+            25%{top:0%; left: 30%;}
+            50%{bottom: 20%; right: 80%;}
+            75%{left: 20%; top: 30%;}
+            100%{right: 10%;bottom: 20%;}
+            
         }
     </style>
 </head>
