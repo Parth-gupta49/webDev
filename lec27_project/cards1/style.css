@@ -1,0 +1,44 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.container{
+    background-color: rgb(178, 178, 154);
+    width: 100vw;
+    height: 100vh;
+    border: 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box
+{   width: 350px;
+    height: 530px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    align-items: center;
+    /* justify-content: center; */
+    padding: 18px;
+    gap: 20px;
+}
+
+.box img{
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+}
+/* 
+.box h2{
+    margin-top: 8px;
+}
+
+.box p{
+    margin-top: 8px;
+} */

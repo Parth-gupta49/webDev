@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: aquamarine;
+}
+
+.box {
+    background-color: beige;
+    border: 2px solid black;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin: auto; */
+    transition: all;
+    transition-duration: 3s;
+    transition-delay: 0ms;
+    transition-timing-function: linear;
+
+
+}
+
+.box:hover {
+    /* transform: rotate(350deg); */
+    /* transform: scale(2); */
+    /* transform: scale(2);
+    transform: rotate(-200deg);  */
+    /*can't use scale and rotate at the same time*/
+    transform: skew(-35deg);
+    background-color: fuchsia;
+}
+
+p {
+    font-size: 35px;
+}

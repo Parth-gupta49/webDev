@@ -1,0 +1,93 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.container{
+    background-color: rgba(88, 118, 120, 0.51);
+    width: 100vw;
+    height: 100vh;
+    border: 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box
+{   width: 350px;
+    height: 530px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    align-items: center;
+    /* justify-content: center; */
+    /* padding: 18px; */
+    gap: 20px;
+}
+
+.box img{
+    width: 100%;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+
+    height: 30%;
+}
+
+.text{
+    /* display: flex;
+    flex-direction: column; */
+    gap: 20px;
+    /* justify-content: center;
+    align-items: center; */
+    text-align: center;
+    position: relative;
+    top: 10px;
+    /* padding:30px; */
+}
+
+.text h2{
+    font-weight: bold;
+}
+
+.annualPlan{
+    display: flex;
+    background-color: rgba(88, 118, 120, 0.51);
+    width: 80%;
+    height: 10%;
+    border-radius: 10px;
+    /* gap: 10px; */
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+
+    margin-top: 15px;
+}
+.annualPlan .annualPlanContent{
+    /* padding: 5px; */
+    display: flex;
+    gap: 10px;
+}
+.annualPlan img{
+    border-radius: 10px;
+    width: 15%;
+    height: 90%;
+}
+
+#butt{
+    width: 80%;
+    height: 10%;
+    border-radius: 10px;
+    background-color: rgb(16, 24, 111);
+    box-shadow: 0px 0px 10px black;
+    color: white;
+
+}
+
+#cancel {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}

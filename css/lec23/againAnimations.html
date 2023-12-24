@@ -14,12 +14,12 @@
 
         .container {
             width: 100vw;
-            
+
             background-color: beige;
             height: 100vh;
             border: 5px solid black;
         }
-        
+
         .box {
             width: 350px;
             height: 80px;
@@ -36,7 +36,7 @@
             */
             /*animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);*/
             /*animation-timing-function: cubic-bezier(0.42, 0, 1, 0.24);*/
-            
+
             /*animation-delay: 1s;*/
             /*animation-direction: alternate;*/
             /*animation-fill-mode basically means what we have to do before the first keyframe and the lasy keyframe
@@ -48,10 +48,11 @@
             /* 
             @keyframes duration | easing-function | delay | iteration-count | direction | fill-mode |play-state | name 
             */
-            animation: 5s linear 1s infinite alternate none PAUSED  leftMovement;
+            animation: 5s linear 1s infinite alternate none running leftMovement;
 
         }
-        .box2{
+
+        .box2 {
             width: 350px;
             height: 80px;
             border-radius: 5px;
@@ -59,10 +60,11 @@
             /*margin: 10px;*/
             border: 2px solid black;
             position: relative;
-            animation: 5s linear 1s infinite alternate none PAUSED  rightMovement;
-            
+            animation: 5s linear 1s infinite alternate none running rightMovement;
+
         }
-        .circle{
+
+        .circle {
             width: 100px;
             height: 100px;
             border: 2px solid black;
@@ -73,6 +75,7 @@
             left: 47%;
             animation: 5s linear 0s infinite alternate-reverse none RUNNING circleMovement;
         }
+
         @keyframes rightMovement {
             from {
                 top: 20px;
@@ -84,6 +87,7 @@
                 left: 1150px;
             }
         }
+
         @keyframes leftMovement {
             from {
                 top: 570px;
@@ -97,12 +101,31 @@
         }
 
         @keyframes circleMovement {
-            0%{top: 30%;right: 30%;}
-            25%{top:0%; left: 30%;}
-            50%{bottom: 20%; right: 80%;}
-            75%{left: 20%; top: 30%;}
-            100%{right: 10%;bottom: 20%;}
-            
+            0% {
+                top: 30%;
+                right: 30%;
+            }
+
+            25% {
+                top: 0%;
+                left: 30%;
+            }
+
+            50% {
+                bottom: 20%;
+                right: 80%;
+            }
+
+            75% {
+                left: 20%;
+                top: 30%;
+            }
+
+            100% {
+                right: 10%;
+                bottom: 20%;
+            }
+
         }
     </style>
 </head>

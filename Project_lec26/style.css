@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    overflow-x: none;
+    background-color: #e2e5e8;
+    background-image: linear-gradient(98deg, #e2e5e8 0%, #DDD6F3 100%);
+    overflow-x: hidden;
+}
+
+.navContainer {
+    width: 100vw;
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+
+    min-height: 60px;
+
+}
+
+#navList {
+    list-style: none;
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+#navLogo {
+    font-size: 2.8rem;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+#navItems {
+    display: flex;
+    gap: 40px;
+}
+
+.footerBox {
+    width: 100vw;
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+    position: relative;
+    text-align: center;
+    min-height: 40px;
+}
+.footerBox p{
+    color: white;
+    font-size: 2rem;
+}
+.contentBox{
+    margin: auto;
+    width: 60%;
+    /* border: 1px solid; */
+    background-color: white;
+    box-shadow: 0px 0px 30px black;
+
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    padding: 3rem;
+}
+
+.item{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.rightBox{
+    position: relative;
+}
+
+
+
+.rightBox .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(59, 57, 57, 0.752);
+    transition: all 0.3s linear 0s;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+
+    
+
+    opacity: 0;
+}
+
+.rightBox:hover .overlay{
+    opacity: 1;
+}
+
+.rightBox .overlay span{
+    color: white;
+    font-size: 1.2rem;
+}
+
+.rightBox img{
+    height: 300px;
+    border-radius: 20px;
+    /* transition: all;
+    transition-duration: .6s;
+    transition-timing-function: linear;
+    transition-delay: 0ms; */
+
+}
+
+.rightBox :hover {
+    transform: scale(1.014);
+}
+.leftBox{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.leftBox h2{
+    font-size: 2rem;
+}
+
+.ingBox{
+    font-size: 1.3rem;
+}
+
+.recBox{
+    font-size: 1.3rem;
+}
+
