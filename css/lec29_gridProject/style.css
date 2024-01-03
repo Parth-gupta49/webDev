@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.meriBody
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 80vw;
+    /* border: 1px solid black; */
+    /* background-color: beige; */
+    height: 100%;
+    /* display: grid;
+    grid-template: repeat(4,1fr) / repeat(2,1fr); */
+}
+
+.headerHaiYe{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 4rem;
+    text-align: center;
+}
+.header-desc{
+    color: var(--primaryNormal); 
+    max-width: 569px;
+    /* padding: px; */
+    text-align: center;
+    
+}
+.headerHaiYe p{
+    font-size: 18px;
+    
+}
+.cards-div{
+
+    display: grid;
+    grid-template: repeat(2,1fr) / repeat(4,1fr);
+    gap: 20px;
+}
+
+.card{
+     /* width: 50%; */
+    height: 400px;
+    border: 1px solid rgba(128, 128, 128, 0.314);
+    border-radius: 10px;
+    /* border-top-left-radius: 10px;
+    border-top-right-radius: 10px; */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* .card:hover .img-content{
+        transform: scale(1.2);
+        transition-duration:1s ;
+        transition-timing-function: linear;
+        transition-delay: 300ms;
+} 
+*/
+
+.img-content
+{   
+    position: relative;
+    overflow: hidden;
+    height: 7rem;
+}
+
+
+
+.text-div{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+}
+
+.paraHeading{
+    text-decoration: none;
+    /* font-size: 10px; */
+    color: black;
+}
+/* .paraHeading:hover{
+    text-decoration:wavy;
+} */
+
+.author-div{
+    display: flex;
+    width: 100%;
+    height: 20%;
+    /* border: 2px solid black; */
+    gap: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.author-div img{
+    border: 1px solid var(--primaryNormal);
+    border-radius: 50px;
+    background-color: rgba(117, 126, 126, 0.293);
+    /* margin: 10px; */
+    position: relative;
+    bottom: 10px;
+    left: 10px;
+    margin: 4px;
+    /* width: 5rem; */
+    
+}
+.innerDiv{
+    display: flex;
+    width: 60%;
+    gap: 25px;
+    padding: 10px;
+}
+
+.label{
+    align-self: center;
+    border: 1px solid black;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 15px;
+}
+:root{
+    --primaryNormal:rgb(106, 104, 104);
+}
+.normal{
+    color: rgb(106, 104, 104);
+}

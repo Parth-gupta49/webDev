@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: beige;
+
+}
+
+.container{
+    height: 70vh;
+    width: 80vw;
+    border: 2px solid maroon;
+
+    margin: 50px;
+    background-color: aqua;
+
+
+    display: grid;
+
+    grid-template:repeat(2,1fr) / repeat(3,1fr);
+}
+
+.box{
+    border: 2px solid white;
+}

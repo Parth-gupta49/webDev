@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(59, 55, 167);
+
+}
+
+.container {
+    height: 70vh;
+    width: 80vw;
+    border: 2px solid yellow;
+
+    margin: 50px;
+    background-color: black;
+
+
+    display: grid;
+
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+}
+
+.box {
+    border: 2px solid white;
+}
+
+.box1 {
+    background-color: red;
+    grid-column: 1 / 4;
+}
+
+.box2 {
+    background-color: yellow;
+    grid-column: 1 / 2;
+}
+
+.box3 {
+    background-color: brown;
+    grid-column: 2 / 4;
+    
+}
+
+.box4 {
+    background-color: fuchsia;
+    grid-column: 1 / 4;
+}
+
+.box5
+{
+    background-color: teal;
+    
+}

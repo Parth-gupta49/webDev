@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body{
+    background-color: beige;
+    width: 100vw;
+    height: 100%;
+}
+
+.meraContainer{
+    /* text-align: center; */
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    border: 5px solid green;
+    align-items: center;
+    
+}
+
+.calendar{
+    margin: 30px;
+    width: 280px;
+    display: grid;
+    /* border: 2px solid black; */
+    height: 200px;
+    font: 100%;
+
+    grid-template: repeat(6,1fr) / repeat(7,1fr);
+}
+
+ol{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+li{
+    padding: 5px;
+}
+.dayName{
+    background-color: rgba(227, 222, 222, 0.745);
+
+}   
+
+.firstDay{
+    grid-column: 2 / 3;
+}

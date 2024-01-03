@@ -1,0 +1,21 @@
+body{
+    background-color: aqua;
+}
+/* @media (min-width:500px) and (max-width:1000px) {
+    body{
+        background-color: maroon;
+    }
+} */
+
+/* modern syntax of doing the same stuff as done above  */
+
+/* @media (500px < width < 1000px){
+    body{
+        background-color: maroon;
+    }
+} */
+/* @media (500px < height < 1000px){
+    body{
+        background-color: maroon;
+    }
+} */
