@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loader</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            height: 100%;
+            width: 100%;
+        }
+
+        .loader {
+            margin: 10px 0 0 2rem;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+
+            border: 20px solid rgb(255, 64, 96);
+            border-top: 20px solid black;
+            animation-name: loader;
+            animation-iteration-count: infinite;
+            animation-duration: 2s;
+            animation-timing-function: linear;
+        }
+
+        @keyframes loader {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="loader"></div>
+</body>
+
+</html>
