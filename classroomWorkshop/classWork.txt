@@ -1,0 +1,224 @@
+Kannan Krishnan
+10:53 AM
+npm install --save bootstrap@3.4.1 jquery
+Kannan Krishnan
+10:54 AM
+"./node_modules/bootstrap/dist/css/bootstrap.min.css",
+Kannan Krishnan
+10:57 AM
+<input type="text" placeholder="First Name" class="form-control" formControlName="firstName" />
+Kannan Krishnan
+11:00 AM
+profileForm = new FormGroup({
+    firstName: new FormControl(),
+    lastName: new FormControl(),
+    age: new FormControl(),
+  });
+Kannan Krishnan
+11:04 AM
+FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+Kannan Krishnan
+11:05 AM
+<form [formGroup]="profileForm">
+Kannan Krishnan
+11:42 AM
+Express
+-------
+npm init
+npm install --save express
+npm install -g nodemon
+npm install --save mangoose
+Kannan Krishnan
+11:52 AM
+app.listen("3000", () => {
+  console.log(`App listening @ 3000!`);
+});
+Kannan Krishnan
+12:00 PM
+app.get("/", async (req, res) => {
+  res.send("App started...");
+});
+Kannan Krishnan
+12:14 PM
+mongoose
+    .connect("mongodb://localhost:27017/test")
+    .then(() => console.log("Connected!"));
+Kannan Krishnan
+12:16 PM
+var mongoose = require("mongoose");
+Kannan Krishnan
+12:26 PM
+var mongoose = require("mongoose");
+const Schema = mongoose.Schema;
+
+var profileSchema = new Schema({
+  firstName: String,
+  lastName: String,
+  age: Number,
+});
+
+module.exports = { profileSchema: profileSchema };
+Kannan Krishnan
+12:28 PM
+var model = require("./model");
+profile = mongoose.model("profile", model.profileSchema);
+Kannan Krishnan
+12:29 PM
+app.get("/profile-list", async (req, res) => {
+  data = await profile.find({}).exec();
+  res.send(data);
+});
+Kannan Krishnan
+12:36 PM
+app.post("/add-profile", async (req, res) => {
+  const data1 = await profile.create(req.body);
+  res.send(data1);
+});
+Kannan Krishnan
+12:37 PM
+insertData = {"firstName":"kannan"
+, "lastName":"Krishnan", "age":35 };
+Kannan Krishnan
+12:50 PM
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { Observable, catchError } from 'rxjs';
+import { Profile } from './entity/profile';
+
+@Injectable({
+  providedIn: 'root',
+})
+export class ApiserviceService {
+  baseAPIURL: string = 'http://localhost:3000/';
+  constructor(private http: HttpClient) {}
+  insertProfile(profile: Profile): Observable<Profile> {
+    return this.http.post<Profile>(this.baseAPIURL + 'add-profile', profile);
+  }
+getProfile(): any {
+    return this.http.get(this.baseAPIURL + 'profile-list');
+  }
+}
+Kannan Krishnan
+12:53 PM
+export class Profile {
+  firstName: string = '';
+  lastName: string = '';
+  age: number = 0;
+}
+Kannan Krishnan
+12:56 PM
+profile: Profile;
+  profileLst: Profile[];
+  constructor(private apiserviceService: ApiserviceService) {
+    this.profile = new Profile();
+    this.profileLst = [];
+  }
+  saveDetails() {
+    this.profile.firstName = this.profileForm.get('firstName')?.value;
+    this.profile.lastName = this.profileForm.get('lastName')?.value;
+    this.profile.age = this.profileForm.get('age')?.value;
+    this.apiserviceService.insertProfile(this.profile).subscribe((data) => {
+      console.log(data);
+    });
+  }
+Kannan Krishnan
+12:58 PM
+<button type="submit" (click)="saveDetails()" class="btn btn-success">Add Profile</button>
+<div class="header">
+  <h1>Angular - Express Workshop</h1>
+</div>
+<form [formGroup]="profileForm">
+  <div class="col-sm-6 padding-10">
+    <div class="col-sm-6">
+      <input type="text" placeholder="First Name" class="form-control" formControlName="firstName" />
+    </div>
+    <div class="col-sm-6">
+      <input type="text" placeholder="Last Name" class="form-control" formControlName="lastName" />
+    </div>
+
+    <div class="col-sm-6 padding-10">
+      <input type="text" placeholder="Age" class
+Kannan Krishnan
+1:01 PM
+getDetails() {
+    this.apiserviceService.getProfile().subscribe((data: any) => {
+      this.profileLst = data;
+    });
+ngOnInit(): void {
+    this.getDetails();
+  }
+Kannan Krishnan
+1:02 PM
+<div class="col-sm-6 padding-10">
+    <button class="btn btn-default" (click)="getDetails()"> Refresh </button>
+    <table class="table table-bordered table-hover">
+      <thead>
+        <tr>
+          <th> First Name</th>
+          <th> Last Name</th>
+          <th> Age</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let profile of profileLst">
+          <td>
+            {{profile.firstName}}
+          </td>
+          <td>
+            {{profile.lastName}}
+          </td>
+</td>
+          <td>
+            {{profile.age}}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+Kannan Krishnan
+1:11 PM
+var bodyParser = require("body-parser");
+const cors = require("cors");
+app.use(express.json()); // Make sure it comes back as json
+app.use(bodyParser.json()); // support json encoded bodies
+app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
+app.use(cors());
+Kannan Krishnan
+1:16 PM
+profile = mongoose.model("profile", model.profileSchema);
+app.use(express.json()); // Make sure it comes back as json
+app.use(bodyParser.json()); // support json encoded bodies
+app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
+app.use(cors());
+Kannan Krishnan
+1:18 PM
+<div class="header">
+  <h1>Angular - Express Workshop</h1>
+</div>
+<form [formGroup]="profileForm">
+  <div class="col-sm-6 padding-10">
+    <div class="col-sm-6">
+      <input type="text" placeholder="First Name" class="form-control" formControlName="firstName" />
+    </div>
+    <div class="col-sm-6">
+      <input type="text" placeholder="Last Name" class="form-control" formControlName="lastName" />
+    </div>
+
+    <div class="col-sm-6 padding-10">
+      <input type="text" placeholder="Age" class
+<div class="col-sm-6 padding-10">
+      <input type="text" placeholder="Age" class="form-control" formControlName="age" />
+    </div>
+    <div class="col-sm-6 padding-10">
+      <button type="submit" (click)="saveDetails()" class="btn btn-success">Add Profile</button>
+    </div>
+  </div>
+  <div class="col-sm-6 padding-10">
+    <button class="btn btn-default" (click)="getDetails()"> Refresh </button>
+    <table class="table table-bordered table-hover">
+      <thead>
+        <tr>
+          <th> Fi
+hwo-rpvw-bch
