@@ -1,0 +1,38 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    
+    width: 100vw;
+    height: 100vh;
+}
+.main{
+    height: 80vh;
+    background-image: url(./../assets/images/bg-image.jpg);
+    position: relative;
+}
+
+.main .box{
+    height: 80vh;
+    background-color: black;
+    opacity: 0.6;
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.navBar{
+    /* position: absolute; */
+    background-color: red;
+    width: 80vw;
+    display: flex;
+
+    
+}
+
+
+
+
