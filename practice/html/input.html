@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exploring input types</title>
+</head>
+<body>
+    
+    <form action="">
+        <input type="color" name="name" id="id">
+        <input type="date" name="" id="">
+        <input type="datetime-local" name="" id="">
+        <br/>
+        <label for="email">Email : </label>
+        <input type="email" id="email">
+        <br/>
+        <input type="file" name="" id="" accept="">
+        <br />
+
+        <input type="image" src="./../../media/nature.jpg" alt="" width="300">
+        <br />
+
+        <!-- type="month" is used for giving just month name and year-->
+        <input type="month" name="month" id="" >
+
+        <input type="number" name="number" id="num">
+
+        <input type="password" >
+        Gender : 
+        <label for="male">Male</label>
+        <input type="radio" id="male" name="gender">
+        <label for="female">Female</label>
+        <input type="radio" id="female" name="gender">
+
+        <input type="range" name="range" id="">
+        <br />
+        <input type="search" name="search" id="">
+
+        <input type="submit" value="Submit">
+        <br />
+        <label for="phone">PHONE : </label>
+        <input type="tel" name="phone" id="phone">
+
+        <br />
+        <label for="">Enter TIME : </label>
+        <input type="time" name="" id="time">
+
+        <br />
+        <input type="url" name="url" id="url">
+
+        <br />
+        <input type="week" name="week" id="week">
+
+        <input type="button" value="Button" accesskey="s" onclick=myFun() disabled>
+
+<br>
+        <input type="button" value= "Enabled" id = "button" />
+
+
+    </form>
+</body>
+<script>
+    function myFun(){
+        alert("clicked")
+    }
+
+    let btn = document.querySelector("#button")
+
+    btn.addEventListener('click',disableButton)
+    function disableButton() {
+        btn.disabled = true
+        btn.value = "Disabled"
+        setTimeout( ()=>{
+        btn.value = "Enabled"
+        btn.disabled = false
+    },2000) 
+    }
+    
+
+</script>
+</html>

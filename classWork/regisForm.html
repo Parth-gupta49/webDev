@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        #caption{
+            font-size: 1.5rem;
+            text-shadow: 1px 1px 2px rgb(138, 44, 44), 0 0 1em rgb(11, 11, 236), 0 0 0.2em rgb(101, 223, 121);
+            text-align: center;
+            text-decoration: underline;
+        }
+        .parent {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url(./bgImage.jpg);
+            background-size: cover;
+            /* color: white; */
+        }
+
+        .child {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            width: 60%;
+            height: 80%;
+            align-items: center;
+            justify-content: center;
+            background-color: transparent;
+            border-radius:20px;
+            box-shadow: 0 0 10px rgb(55, 39, 198);
+            font-size: 20px;
+            border: 1px solid;
+
+        }
+        label{
+            font-weight: 550;
+        }
+        input{
+            padding: 10px;
+            background-color: transparent;
+            border: 1px solid;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            border-color: rgb(32, 32, 99);
+        }
+        input::placeholder{
+            text-align: center;
+            color: rgb(255, 170, 0);
+        }
+        .child legend {
+           
+            /*background-color: rgb(87, 0, 87);*/
+        }
+
+        .button {
+            border-radius: 13px;
+            padding: 4px 15px;
+            margin: 10px;
+            cursor: pointer;
+            border: 1px solid black;
+            background-color: rgb(59, 59, 161);
+            transition-duration: .4s;
+            transition-timing-function: ease-out;
+        }
+        .button:hover{
+            background-color: rgb(90, 90, 214);
+        }
+
+        #gender {
+            margin-right: 2rem;
+        }
+        #course{
+            padding: 4px 15px;
+            margin: 10px;
+            cursor: pointer;
+            border: 1px solid black;
+            background-color: rgb(59, 59, 161);
+            transition-duration: .4s;
+            color: wheat;
+        }
+        #course:active{
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+
+        <form action="" class="child">
+            <span id="caption">
+                REGISTRATION FORM
+            </span>
+        
+       
+            
+            <div>
+                <label for="firstName" class="label">First Name : </label>
+                <input type="text" id="firstName" placeholder="First Name" required>
+                <br />
+            </div>
+            <div>
+                <label for="lastName" class="label">Last Name : </label>
+                <input type="text" id="lastName" placeholder="Last Name">
+                <br />
+            </div>
+            <div>
+                <label for="address" class="label">Address : </label>
+                <!-- <textarea name="address" id="address" cols="10" rows="2"></textarea> -->
+                <input type="text" id="address" placeholder="Address">
+                <br />
+            </div>
+            <div>
+                <label for="Gender">Gender:
+                    
+                </label>
+
+                <label for="radio">Male</label>
+                <input type="radio" name="Gender" id="radio1" style="margin-right: 10px;">
+                <label for="radio">Female</label>
+                <input type="radio" name="Gender" id="radio2">
+                <br />
+            </div>
+            <div>
+                <label for="email">Email : </label>
+                <input type="email" name="email" id="email" placeholder="Email">
+                <br />
+            </div>
+            <div>
+                <label for="phone" >Mobile No : </label>
+                <input type="number" name="mobile" id="phone" placeholder="Mobile Number" required maxlength="10">
+                <br />
+            </div>
+
+                <div>
+                    <label for="course">Course : </label>
+                    <select name="course" id="course">
+                        <option value="JS">JavaScript</option>
+                        <option value="JS">Java</option>
+                        <option value="JS">C++</option>
+                    </select>
+                </div>
+                <div>
+                    <input type="submit" class="button" accesskey="s">
+                    <input type="reset" class="button">
+                </div>
+    </form>
+    </div>
+</body>
+
+</html>
